@@ -1,7 +1,14 @@
 (async function(){
-    const CONTEST_ACCOUNT = prompt("Submit an account users must be subscribed to to be elligable for the raffle.\nLeave empty if you do not their subscriptions to be checked.\nNote if people have their subscriptions privated this will exclude them from the raffle!\n\n(This is case sensitive!)").trim();
+    alert("Hi! Please answer a few quick questions...");
+    const CONTEST_ACCOUNT = prompt("Submit an account users must be subscribed to to be elligable for the raffle.\nLeave empty if you do not want their subscriptions to be checked.\nNote if people have their subscriptions privated this will exclude them from the raffle!\n\n(This is case sensitive!)").trim();
     const EXCLUDED_USERS = prompt("Provide any users you don't want to win the raffle.\nProvide these with commas seperating them.\n\nEx: user1, user2\n(this is case sensitive!)").split(',').map(user => user.trim());
-    const EXTRA_SUBMISSIONS = Boolean(prompt("Do you want extra submissions via drawing the raffle character to be considered?\nReply with 'true' or 'false'").trim().toLowerCase());
+    let EXTRA_SUBMISSIONS = false;
+    try {
+        EXTRA_SUBMISSIONS = Boolean(prompt("Do you want extra submissions via drawing the raffle character to be considered?\nReply with 'true' or 'false'").trim().toLowerCase());
+    } catch {
+        alert("I can't understand your answer. Please try again.");
+        return;
+    }
     
     alert("Got it! Give me a few seconds... *beep boop*");
 
@@ -41,5 +48,5 @@
     }
 
     let winner = entries_uwu[Math.floor(Math.random() * entries_uwu.length)];
-    alert("Out of " + entries_uwu.length + " entries, our lucky winner is " + winner + "!");
+    alert("Out of " + entries_uwu.length + " valid entries, our lucky winner is " + winner + "!");
 })();
