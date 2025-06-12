@@ -1,0 +1,22 @@
+{
+  "name": "toyhouserafflepicker",
+  "version": "1.0.0",
+  "description": "Picks a random winner for Toyhouse Raffles",
+  "main": "minify.js",
+  "scripts": {
+    "build": "node minify.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbko6/ToyhouseRafflePicker.git"
+  },
+  "author": "jbko6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbko6/ToyhouseRafflePicker/issues"
+  },
+  "homepage": "https://github.com/jbko6/ToyhouseRafflePicker#readme",
+  "dependencies": {
+    "minify": "^14.0.0"
+  }
+}
