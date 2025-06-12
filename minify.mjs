@@ -13,8 +13,6 @@ const instructions = `# RAFFLE SCRIPT
 6. Click the bookmark to run the script.
 7. You may need to wait a few moments depending on your network speed.
 
-hiii! :3
-
 \`\`\`
 $SOURCE$
 \`\`\`
